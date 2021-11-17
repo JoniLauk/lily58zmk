@@ -58,17 +58,17 @@
 
 		raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       |     |     |      |      |      |                   |  F1  |  F2   |  F3   |  F4  |  F5   |  F6   |
-// |       |     |PSCRN| SLCK |PAUSE |      |                   |  F7  |  F8   |  F9   |  F10 | F11   |  F12  |
-// |       |     | INS | HOME |PG_UP |      |                   |      |   <-  |   v   |  ^   |  ->   |       |
-// |       |     | DEL | END  |PG_DN |      |        |  |       |      |       |       |      |       |       |
-//                     |      |      | DEF  |        |  |       | LOWER|       |       |
+// |  F1  |  F2   |  F3   |  F4  |  F5   |  F6   |                   |  F7  |  F8   |  F9   |  F10 | F11   |  F12  |
+// |      |     	| PSCRN | SLCK | PAUSE |       |                   |      |       |       |      |       |       |
+// |      |    	 	|  INS  | HOME | PG_UP |       |                   |      |   <-  |   v   |  ^   |  ->   |       |
+// |      |     	|  DEL  | END  |PG_DN  |       |        |  |       |      |       |       |      |       |       |
+//                     		|       |      |DEF    |        |  |       | LOWER|       |       |
 			bindings = <
-&trans    &trans &trans    &trans    &trans  						&trans                       		&kp F1      &kp F2    &kp F3    &kp F4    &kp F5      &kp F6
-&trans 	  &trans &kp PSCRN &kp SLCK  &kp PAUSE_BREAK    &trans                       		&kp F7      &kp F8    &kp F9    &kp F10   &kp F11     &kp F12
-&trans    &trans &kp INS   &kp HOME  &kp PG_UP  				&trans                       		&trans      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT   &trans
-&trans    &trans &kp DEL   &kp END   &kp PG_DN 					&trans   			&trans  &trans    &trans      &trans    &trans    &trans    &trans      &trans
-                           &trans    &trans  						&to DEFAULT   &trans  &trans    &to LOWER  	&trans    &trans
+&kp F1    &kp F2    	&kp F3    &kp F4    &kp F5      			&kp F6                      		&kp F7      &kp F8    &kp F9    &kp F10   &kp F11     &kp F12
+&trans 	  &trans &kp 	PSCRN 		&kp SLCK  &kp PAUSE_BREAK   &trans                      		&trans      &trans    &trans    &trans    &trans      &trans
+&trans    &trans &kp INS   			&kp HOME  &kp PG_UP  				&trans                       		&trans      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT   &trans
+&trans    &trans &kp DEL   			&kp END   &kp PG_DN 				&trans   			&trans  &trans    &trans      &trans    &trans    &trans    &trans      &trans
+                           &trans    &trans  						&to DEFAULT  			&trans  &trans    &to LOWER  	&trans    &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
