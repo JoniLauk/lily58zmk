@@ -40,17 +40,17 @@
 
 		lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT0 | BT1 |  BT2 |  BT3 |  BT4 |                   |      |       |       |       |      |OUT_TOG|
-// |       |     |  %  |   +  |   *  |      |                   |      |  (    |  )    |  @    |  #   |       |
-// |       |  :  |  &  |   -  |   ?  |      |                   |      |  {    |  }    |  ~    |  `   |       |
+// |       | BT0 | BT1 |  BT2 |  BT3 |  BT4 |                   |BT_CLR|       |       |       |      |OUT_TOG|
+// |       |  *  |  %  |   +  |   ?  |      |                   |      |  (    |  )    |  @    |  #   |       |
+// |       |  :  |  &  |   -  |   '  |      |                   |      |  {    |  }    |  ~    |  `   |       |
 // |       |     |  ^  |   =  |   !  |      |        |  | tog 4 |      |  [    |  ]    |  $    |  \   |       |
 //                     |      |      | DEF  |        |  |       | RAISE|       |       |
 			bindings = <
-&bt BT_CLR &bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3         &bt BT_SEL 4    										&trans      &trans    &trans      &trans    &trans    &out OUT_TOG
-&trans     &trans    		  &kp PRCNT   		&kp KP_PLUS     &kp KP_MULTIPLY      &trans          						  			&trans  	  &kp LPAR  &kp RPAR   	&kp AT    &kp HASH  &trans
-&trans     &kp COLON    	&kp AMPS        &kp MINUS       &kp QMARK            &trans         										&trans 	    &kp LBRC  &kp RBRC   	&kp TILD  &kp GRAVE &trans
-&trans     &trans 				&kp CARET  			&kp EQUAL       &kp EXCL             &trans     			&trans   &tog 4   &trans      &kp LBKT 	&kp RBKT		&kp DLLR 	&kp BSLH  &trans
-                                          &trans          &trans               &to DEFAULT     &trans   &trans   &to RAISE  &trans    &trans
+&trans 		&bt BT_SEL 0   	&bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    								&bt BT_CLR  &trans    &trans      &trans    &trans    &out OUT_TOG
+&trans    &kp KP_MULTIPLY &kp PRCNT   	&kp KP_PLUS     &kp QMARK	      &trans          						  	&trans  	  &kp LPAR  &kp RPAR   	&kp AT    &kp HASH  &trans
+&trans    &kp AMPS    	 	&kp COLON     &kp MINUS       &kp SQT       	&trans         									&trans 	    &kp LBRC  &kp RBRC   	&kp TILD  &kp GRAVE &trans
+&trans    &trans 				 	&kp CARET  		&kp EQUAL       &kp EXCL        &trans     		&trans   &tog 4   &trans      &kp LBKT 	&kp RBKT		&kp DLLR 	&kp BSLH  &trans
+                                        &trans          &trans          &to DEFAULT   &trans   &trans   &to RAISE  	&trans    &trans
 			>;
  
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
