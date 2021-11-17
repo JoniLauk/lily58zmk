@@ -40,16 +40,16 @@
 
 		lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |       | BT0 | BT1 |  BT2 |  BT3 |  BT4 |                   |BT_CLR|       |       |       |      |OUT_TOG|
-// |       |  *  |  %  |   +  |   ?  |      |                   |      |  (    |  )    |  @    |  #   |       |
-// |       |  '  |  &  |   -  |   :  |      |                   |      |  {    |  }    |  ~    |  `   |       |
-// |       |     |  ^  |   =  |   !  |      |        |  | tog 4 |      |  [    |  ]    |  $    |  \   |       |
+// |       | BT0 | BT1 |  BT2 |  BT3 |  BT4 |                   |BT_CLR|       |       |       |OUT_TOG|       |
+// |       |  *  |  %  |   +  |   ?  |      |                   |      |  (    |  )    |  @    |  #    |       |
+// |       |  '  |  &  |   -  |   :  |      |                   |      |  {    |  }    |  ~    |  `    |       |
+// |       |     |  ^  |   =  |   !  |      |        |  | tog 4 |      |  [    |  ]    |  $    |  \    |       |
 //                     |      |      | DEF  |        |  |       | RAISE|       |       |
 			bindings = <
-&trans 		&bt BT_SEL 0   	&bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    								&bt BT_CLR  &trans    &trans      &trans    &trans    &out OUT_TOG
-&trans    &kp KP_MULTIPLY &kp PRCNT   	&kp KP_PLUS     &kp QMARK	      &trans          						  	&trans  	  &kp LPAR  &kp RPAR   	&kp AT    &kp HASH  &trans
-&trans    &kp SQT					&kp AMPS    	&kp MINUS       &kp COLON       &trans         									&trans 	    &kp LBRC  &kp RBRC   	&kp TILD  &kp GRAVE &trans
-&trans    &trans 				 	&kp CARET  		&kp EQUAL       &kp EXCL        &trans     		&trans   &tog 4   &trans      &kp LBKT 	&kp RBKT		&kp DLLR 	&kp BSLH  &trans
+&trans 		&bt BT_SEL 0   	&bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    								&bt BT_CLR  &trans    &trans      &trans    &out OUT_TOG  &trans 
+&trans    &kp KP_MULTIPLY &kp PRCNT   	&kp KP_PLUS     &kp QMARK	      &trans          						  	&trans  	  &kp LPAR  &kp RPAR   	&kp AT    &kp HASH  		&trans
+&trans    &kp SQT					&kp AMPS    	&kp MINUS       &kp COLON       &trans         									&trans 	    &kp LBRC  &kp RBRC   	&kp TILD  &kp GRAVE 		&trans
+&trans    &trans 				 	&kp CARET  		&kp EQUAL       &kp EXCL        &trans     		&trans   &tog 4   &trans      &kp LBKT 	&kp RBKT		&kp DLLR 	&kp BSLH  		&trans
                                         &trans          &trans          &to DEFAULT   &trans   &trans   &to RAISE  	&trans    &trans
 			>;
  
@@ -58,7 +58,7 @@
 
 		raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  F1  |  F2   |  F3   |  F4  |  F5   |  F6   |                   |  F7  |  F8   |  F9   |  F10 | F11   |       |
+// |  F1  |  F2   |  F3   |  F4  |  F5   |  F6   |                   |  F7  |  F8   |  F9   |  F10 | F11   |  F12  |
 // |      |     	| PSCRN | SLCK | PAUSE |       |                   |      |       |       |      | F12   |       |
 // |      |    	 	|  INS  | HOME | PG_UP |       |                   |      |   <-  |   v   |  ^   |  ->   |       |
 // |      |     	|  DEL  | END  |PG_DN  |       |        |  |       |      |       |       |      |       |       |
